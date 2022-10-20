@@ -32,7 +32,7 @@
 
                 let jsonData = {"uid":"a101", "name":"홍길동"};
 
-                $.post('http://chhak.or.kr/data/users.json', jsonData, function(data){
+                $.post('http://chhak.or.kr/data/user.json', jsonData, function(data){
                     $('p:eq(1) > span:eq(0)').text(data.uid);
                     $('p:eq(1) > span:eq(1)').text(data.name);
                     $('p:eq(1) > span:eq(2)').text(data.hp);
@@ -42,16 +42,13 @@
 
             $('button:eq(2)').click(function(){
 
-                $.getJSON('http://chhak.or.kr/data/users.json',function(data){
-                    
+                $.getJSON('http://chhak.or.kr/data/user.json',function(data){
                     $('p:eq(2) > span:eq(0)').text(data.uid);
                     $('p:eq(2) > span:eq(1)').text(data.name);
                     $('p:eq(2) > span:eq(2)').text(data.hp);
                     $('p:eq(2) > span:eq(3)').text(data.age);
                 });
             });
-
-
         });
     </script>
 </head>
